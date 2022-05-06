@@ -1,0 +1,251 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    z-index: 5;
+    background-color: var(--white--color);
+}
+.duc__navbar {
+    padding: 12px 50px;
+    background-color: var(--white--color) !important;
+    height: var(--heght-nav) !important;
+}
+
+.navbar-brand img {
+    width: 60px;
+    height: 60px;
+}
+
+.collapse.navbar-collapse {
+    justify-content: end;
+}
+
+.navbar-nav li {
+    padding: 0 22px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+
+.duc__navbar .navbar-nav a {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.header .navbar-light .navbar-nav .nav-link {
+    color: var(--text-color);
+}
+
+.header .navbar-light .navbar-nav .nav-link:hover {
+    color: var(--hover-textcolor);
+}
+
+.duc__nav-item:hover .duc__dropdown-menu {
+    display: flex;
+}
+
+
+.duc__dropdown-menu {
+    display: flex;
+    flex-direction: column; 
+    position: absolute;
+    width: 350px;
+    right: 0;
+    box-shadow: 1px 0px 1px 2px rgb(240, 240, 240);
+    margin-top: 10px;
+    display: none;
+    top: 60px;
+    background-color: var(--white--color);
+}
+
+.duc__dropdown-menu a:hover {
+    background-color: var(--hover-bgcolor);
+    color: var(--hover-textcolor)
+}
+
+.after.dropdown__menu {
+    height: 20px;
+    top: -20px;
+}
+
+.duc__dropdown-menu  a{
+    text-decoration: none;
+    color: var(--text2-color);
+    padding: 10px 20px;
+}
+
+/* Show Item */
+
+.nav-item-oto:hover .nav-item--show-oto {
+    display: block;
+}
+
+.nav-item-xemay:hover .nav-item--show-xemay {
+    display: block;
+}
+
+.nav-item-service:hover .nav-item--show-service {
+    display: block;
+}
+
+.nav-item-tools:hover .nav-item--show-tools  {
+    display: block;
+}
+
+.nav-item--show-oto {
+    display: none;
+}
+
+.nav-item--show-xemay {
+    display: none;
+}
+
+.nav-item--show-service {
+    display: none;
+}
+
+.nav-item--show-tools {
+    display: none;
+}
+
+/* Header Show */
+.nav-item-show {
+    background-color: var(--white--color);
+    position: absolute;
+    top: var(--heght-nav);
+    width: 100vw;
+    right: 0;
+    left: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-top: 1px solid rgb(221, 220, 220);
+    animation: ShowSidein linear 0.5s;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.nav-item-show::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    top:-20px;
+    z-index: 5;
+}
+
+.item__container-show {
+    width: 100%;
+}
+
+.header-show {  
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px 15px 0;
+    margin: 10px;
+}
+
+.header-show-type {
+    display: flex;
+    align-items: center;
+}
+
+.header-show-type span {
+    padding: 0 0 0 50px;
+}
+
+.header-show-tuvan {
+    display: flex;
+    align-items: center;
+}
+
+.header-show-tuvan i {
+    transform: translateY(2px);
+    padding-right: 5px;
+}
+
+.header-content {
+    padding: 20px  50px ;
+}
+
+/* Content Show */
+
+.header-show--item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-show--item-img {
+
+}
+
+.header-show--item-name {
+    margin: 5px 0;
+    color: var(--text2-color);
+}
+
+.header-show--item-price {
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+.header-show--item-detail a{
+    text-decoration: none;
+    color: var(--primary-color) !important;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.header-content-policy {
+    text-align: center;
+    margin: 30px 0;
+    color: rgb(170, 170, 170);
+}
+
+.header-content--all-view {
+    display: flex;
+    justify-content: center;
+}
+
+.header-content--all-view .btn {
+    width: 360px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.duc__with-item {
+    flex-basis: 375px;
+}
+
+/* Show service */
+.nav-item--show-service {
+    padding: 30px 50px;
+}
+
+.show-service-item div {
+    padding: 10px 0;
+}
+
+.show-service-item div:not(:first-child):hover{
+    background-color: var(--hover-bgcolor);
+    color: var(--hover-textcolor);
+}
+
+.show-service-item div a{
+    text-decoration: none;
+    color: var(--text-color);
+    padding-left: 10px; 
+}
+
+.show-service-item img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Show tools */
+.nav-item--show-tools {
+    padding: 30px 50px;
+}

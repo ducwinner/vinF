@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-color: #1464f4;
+    --text-color: #797979;
+    --white--color: #fff;
+    --text2-color: #1F2125;
+    --heght-nav: 80px;
+    --hover-bgcolor: #e9f1f9;
+    --hover-textcolor: #3b7cca;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size:  62.5%; 
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.body {
+    height: 100vh;
+    width: 100%;
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+.btn {
+    min-width: 200px;
+    height: 40px;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    background-color: var(--white--color);
+}
+
+.after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+@keyframes ShowSidein {
+    from {
+        top: calc(var(--heght-nav) - 20px);
+        opacity: 0;
+    }
+    to {
+        top: var(--heght-nav);
+    }
+}
