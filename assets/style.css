@@ -10,6 +10,10 @@
     height: var(--heght-nav) !important;
 }
 
+.duc__navbar button:hover{
+    animation: hoverForm ease-out 0.5s forwards;
+}
+
 .navbar-brand img {
     width: 60px;
     height: 60px;
@@ -154,6 +158,7 @@
 
 .header-show-type span {
     padding: 0 0 0 50px;
+    cursor: pointer;
 }
 
 .header-show-tuvan {

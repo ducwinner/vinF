@@ -30,11 +30,9 @@ html {
 }
 
 .btn {
-    min-width: 200px;
+    width: 200px;
     height: 40px;
-    color: var(--text-color);
     font-size: 1.6rem;
-    background-color: var(--white--color);
 }
 
 .after {
@@ -45,6 +43,11 @@ html {
     font-size: 1.6rem;
 }
 
+.active-background {
+    color: var(--hover-textcolor);
+}
+
+
 @keyframes ShowSidein {
     from {
         top: calc(var(--heght-nav) - 20px);
@@ -53,4 +56,24 @@ html {
     to {
         top: var(--heght-nav);
     }
+}
+
+@keyframes hoverDetail {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(1px);
+    }
+}
+
+@keyframes hoverForm {
+    0% {
+        background-color: var(--primary-color);
+        color: var(--white--color);
+    } 
+    100% {
+        background-color: var(--white--color);
+        color: var(--primary-color);
+    }   
 }

@@ -34,8 +34,8 @@
                                 <div class="item__container-show">
                                   <div class="header-show">
                                       <div class="header-show-type">
-                                        <span onclick="filterCar('dien')">Động cơ điện</span>
-                                        <span onclick="filterCar('xang')">Động cơ xăng</span>
+                                        <span onclick="filterCar(event, 'dien')">Động cơ điện</span>
+                                        <span onclick="filterCar(event, 'xang')" class="active-background">Động cơ xăng</span>
                                       </div>
                                       <div class="header-show-tuvan">
                                         <i class='bx bxs-comment-detail'></i>
@@ -64,9 +64,9 @@
                                 <div class="item__container-show">
                                   <div class="header-show">
                                       <div class="header-show-type">
-                                        <span onclick="filterMoto('hight')">Cao cấp</span>
-                                        <span onclick="filterMoto('medium')">Trung cấp</span>
-                                        <span onclick="filterMoto('low')">Phổ chông</span>
+                                        <span onclick="filterMoto(event, 'hight')">Cao cấp</span>
+                                        <span onclick="filterMoto(event, 'medium')" class="active-background">Trung cấp</span>
+                                        <span onclick="filterMoto(event, 'low')">Phổ chông</span>
                                       </div>
                                       <div class="header-show-tuvan">
                                         <i class='bx bxs-comment-detail'></i>
@@ -77,6 +77,7 @@
                                     <div class="row no-wrap" id="list_moto">
                                       
                                     </div>
+                                    
                                     <div class="header-content-policy">Chính sách bán hàng có thể được cung cập nhật theo chính sách VinFast tại từng thời điểm</div>
                                     <div class="header-content--all-view">
                                       <button class="btn btn-primary">Xem tất cả các xe</button>
@@ -139,7 +140,7 @@
                               </div>
                             </li>
                             <li>
-                                <button style="font-size: 1.8rem; font-weight: 600;" type="button" class="btn btn-primary">Tài khoản</button>
+                                <button style="font-size: 1.8rem; font-weight: 500;" type="button" class="btn btn-primary">Tài khoản</button>
                             </li>
         
                             <li class="duc__nav-item nav-item dropdown">
@@ -201,8 +202,104 @@
               <div class="wrapper-list-car">
 
                 <div class="row">
-                  <div class="col l-3">
-                    <img src="" alt="" class="wrapper-car-img">
+
+                  <div class="col col-lg-3">
+                    <div class="wrapper-car-img"> 
+                      <img src="./assets/img/wrapper-car/LuxSA/LuxSA_1639673251.png" alt="">
+                      <img src="./assets/img/wrapper-car/LuxSA/360.gif" alt="">
+                    </div>
+                    <h4 class="wrapper-car-slogan">Chinh phục mọi cung đường</h4>
+                    <div class="wrapper-car-name">LUX SA2.0</div>
+                    <div class="wrapper-car-content">
+                      <div class="content-modal">
+                        <span>Dòng xe</span>
+                        <div>SUV</div>
+                      </div>
+                      <div class="content-price">
+                        <span>Giá nêm yết</span>
+                        <div>Từ 1.2tỷ</div>
+                      </div>
+                    </div>
+                    <div class="wrapper-car-btn">
+                      <button style="font-size: 1.6rem; font-weight: 400;" type="button" class="btn btn-primary duc_btn">XEM CHI TIẾT</button>
+                      <button style="font-size: 1.6rem; font-weight: 400;" type="button" class="btn btn-primary">ĐẶT CỌC NGAY</button>
+                    </div>
+                  </div>
+
+                  <div class="col col-lg-3">
+                    <div class="wrapper-car-img"> 
+                      <img src="./assets/img/wrapper-car/LuxA2/LUXA2_1648800453.jpg" alt="">
+                      <img src="./assets/img/wrapper-car/LuxA2/360.gif" alt="">
+                    </div>
+                    <h4 class="wrapper-car-slogan">Tận hưởng từng khoảnh khắc</h4>
+                    <div class="wrapper-car-name">LUX A2.0</div>
+                    <div class="wrapper-car-content">
+                      <div class="content-modal">
+                        <span>Dòng xe</span>
+                        <div>SEDAN</div>
+                      </div>
+                      <div class="content-price">
+                        <span>Giá nêm yết</span>
+                        <div>Từ 929 triệu</div>
+                      </div>
+                    </div>
+                    <div class="wrapper-car-btn">
+                      <button style="font-size: 1.6rem; font-weight: 400;" type="button" class="btn btn-primary duc_btn">XEM CHI TIẾT</button>
+                      <button style="font-size: 1.6rem; font-weight: 400;" type="button" class="btn btn-primary">ĐẶT CỌC NGAY</button>
+                    </div>
+                  </div>
+
+                  <div class="col col-lg-3">
+                    <div class="wrapper-car-img"> 
+                      <img src="./assets/img/wrapper-car/President/president_1639673302.png" alt="">
+                      <img src="./assets/img/wrapper-car/President/360.gif" alt="">
+                    </div>
+                    <h4 class="wrapper-car-slogan">Dấu ấn người thủ lĩnh</h4>
+                    <div class="wrapper-car-name">PRESIDENT</div>
+                    <div class="wrapper-car-content">
+                      <div class="content-modal">
+                        <span>Dòng xe</span>
+                        <div>SUV</div>
+                      </div>
+                      <div class="content-price">
+                        <span>Giá nêm yết</span>
+                        <div>Từ 3.8tỷ</div>
+                      </div>
+                    </div>
+                    <div class="wrapper-car-btn">
+                      <button style="font-size: 1.6rem; font-weight: 400;" type="button" class="btn btn-primary duc_btn">XEM CHI TIẾT</button>
+                      <button style="font-size: 1.6rem; font-weight: 400;" type="button" class="btn btn-primary">ĐẶT CỌC NGAY</button>
+                    </div>
+                  </div>
+
+                  <div class="col col-lg-3">
+                    <div class="wrapper-car-img"> 
+                      <img src="./assets/img/wrapper-car/VF e34/VF e34-600x317 (1)_1648800418.jpg" alt="">
+                      <img src="./assets/img/wrapper-car/VF e34/360.gif" alt="">
+                    </div>
+                    <h4 class="wrapper-car-slogan">Cùng bạn bứt phá mọi giới hạn</h4>
+                    <div class="wrapper-car-name">VF e34</div>
+                    <div class="wrapper-car-content">
+                      <div class="content-modal">
+                        <span>Dòng xe</span>
+                        <div>SUV</div>
+                      </div>
+                      <div class="content-price">
+                        <span>Giá nêm yết</span>
+                        <div>Từ 960 triệu</div>
+                      </div>
+                    </div>
+                    <div class="wrapper-car-btn">
+                      <button style="font-size: 1.6rem; font-weight: 400;" type="button" class="btn btn-primary duc_btn">XEM CHI TIẾT</button>
+                      <button style="font-size: 1.6rem; font-weight: 400;" type="button" class="btn btn-primary">ĐẶT CỌC NGAY</button>
+                    </div>
+                  </div>
+
+                  <div class="col col-lg-3">
+                    <div class="wrapper-car-img"> 
+                      <img src="./assets/img/wrapper-car/Fadil/Fadil-600x317_1648800436.jpg" alt="">
+                      <img src="./assets/img/wrapper-car/Fadil/Fadil-600x317_1648800436.jpg" alt="">
+                    </div>
                     <h4 class="wrapper-car-slogan">Tối ưu mọi trải nghiệm</h4>
                     <div class="wrapper-car-name">FADIL</div>
                     <div class="wrapper-car-content">
@@ -216,30 +313,85 @@
                       </div>
                     </div>
                     <div class="wrapper-car-btn">
-                      <button style="font-size: 1.8rem; font-weight: 600;" type="button" class="btn btn-primary duc_btn">Tài khoản</button>
-                      <button style="font-size: 1.8rem; font-weight: 600;" type="button" class="btn btn-primary duc_btn">Tài khoản</button>
+                      <button style="font-size: 1.6rem; font-weight: 400;" type="button" class="btn btn-primary duc_btn">XEM CHI TIẾT</button>
+                      <button style="font-size: 1.6rem; font-weight: 400;" type="button" class="btn btn-primary">ĐẶT CỌC NGAY</button>
                     </div>
                   </div>
-                  <div class="col l-3"></div>
-                  <div class="col l-3"></div>
                 </div>
+
+              </div>
+              <div class="wrapper-item-panigation Car__wrapper-item-panigation">
+                <span onclick="panigationmoMove(this,panigation_wrap_car,wrapper_list_car_row)" class="background-pri" ></span>
+                <span onclick="panigationmoMove(this,panigation_wrap_car,wrapper_list_car_row)" ></span>
               </div>
             </div>
           </div>
 
-          <div class="wrapper-moto">
+          <div class="wrapper-moto-video">
+            <div class="v-light duc_v-light1">
+              <img src="./assets/img/Vlight-up.png" alt="">
+            </div>
+            <div class="wrapper-car-video">
+              <video id="videoCar" controls="controls" autoplay loop muted>
+                <source src="./assets/video/Xe-may-dien.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="v-light duc_v-light2">
+            <img src="./assets/img/Vlight.svg" alt="">
+          </div>
           
-            <div class="v-light"></div>
+          <div class="wrapper-moto wrapper-car">
+            <div class="wrapper-item">
+              <div class="item-title">
+                <H2>Xe ô tô</H1>
+                <h5>Hơn cả việc tạo nên một chiếc xe mới, VinFast ra đời đại diện cho
+                  tinh thần và niềm kiêu hãnh dân tộc.
+                </h3>
+              </div>
+              <div class="wrapper-list-car ">
 
-            <div class="wrapper-moto-video"></div>
+                <div class="row duc__row">
 
-          <div class="v-light"></div>
 
+                </div>
+              </div>
+              <div class="wrapper-item-panigation Moto__wrapper-item-panigation">
+                <span onclick="panigationmoMove(this,panigation_wrap_moto,wrapper_list_moto_row)" class="background-pri" ></span>
+                <span onclick="panigationmoMove(this,panigation_wrap_moto,wrapper_list_moto_row)" ></span>
+                <span onclick="panigationmoMove(this,panigation_wrap_moto,wrapper_list_moto_row)" ></span>
+                <span onclick="panigationmoMove(this,panigation_wrap_moto,wrapper_list_moto_row)" ></span>
+                <span onclick="panigationmoMove(this,panigation_wrap_moto,wrapper_list_moto_row)" ></span>
+              </div>
           </div>
         </div>
 
-        <div class="footer">
+        <div class="wrapper-footer">
+            <div class="wrapper-footer__img">
+              <img src="./assets/img/wrapper-footer.jpg" alt="">
+            </div>
+            <div class="wrapper-footer__sologan">
+              <div class="sologan__header">Hành trình chinh phục thế giới</div>
+              <div class="sologan__content">
+                <div class="desc">
+                  “Chìa khóa để đạt thành công ngay từ khâu sản 
+                  <br>
+                  xuất của VinFast chính là các đối tác mạnh mẽ như ABB, Bosch, Magna Steyr và Siemens”
+                  <br>
+                </div>
+                <p>	&gt;&gt;CNBC&lt;&lt;</p>
+              </div>
+              </div>
+            </div>
+        </div>
 
+        <div class="footer">
+          <div class="row">
+            <div class="col col-lg-5"></div>
+          </div>
+          <div class="footer__left"></div>
+          <div class="footer__right"></div>
         </div>
     </div>
 
@@ -247,6 +399,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="./main.js"></script>
+  <script src="./container.js"></script>
   <script></script>
 </body>
 </html>
