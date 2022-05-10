@@ -1,0 +1,38 @@
+.wrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper2-header {
+    width: 100vw;
+    padding-top: 60px;
+}
+
+.wrapper2-header img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.wrapper2-cars {
+    margin: 40px  0;
+    width: 80vw;
+    align-items: center;
+}
+
+.item-car {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-car .name-car {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--text2-color);
+}
+
+.wrapper2-car-info {
+    width: 80vw;
+}

@@ -77,3 +77,186 @@ html {
         color: var(--primary-color);
     }   
 }
+
+/* Modal */
+
+.d_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.d_modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/modal/wp8806268.webp);
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    background-size: cover;
+    background-position: center;
+}
+
+.d_modal__body {
+    width: 450px;
+    height: 500px;
+    background-color: var(--white--color);
+    margin: auto;
+    z-index: 1;
+    border-radius: 3px;
+    transform: translateY(30px);
+}
+
+.d_auth-form {
+    padding: 20px 10px 10px;
+}
+
+.d_modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.modal-header-left {
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.modal-header-left:hover {
+    color: var(--primary-color);
+}
+
+.modal-header-right {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--hover-textcolor);
+}
+
+.auth-form__form  {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.auth-form__group {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    height: 80px;
+    margin-bottom: 8px;
+}
+
+.auth-form__group input {
+    width: 100%;
+    height: 36px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 0 10px;
+    font-size: 1.4rem;
+}
+
+.auth-form__group-other {
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth-form__remember {
+    display: flex;
+    align-items: center;
+}
+
+.auth-form__remember input{
+    border: #ccc;
+    font-size: 1.8rem;
+}
+
+.auth-form__remember div {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.auth-form__group-other a{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.auth-form-policy {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.auth-form__controls {
+    margin: 20px 0 30px ;
+}
+
+.auth-form__controls .wrapper-car-btn {
+    display: flex;
+    justify-content: flex-end
+}
+
+.d_modal__inner-socials {
+    width: 100%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+    height: 50px;
+    border-radius: 3px;
+}
+
+.modal-socials-cover {
+    padding: 0 15px 0 8px;
+    display: flex; 
+    justify-content: space-between;
+    background-color: #026ae3;
+    border-radius: 3px;
+    align-items: center;
+    color: var(--white--color);
+    color: white;
+}
+
+.modal-socials-cover div {
+    padding-right: 8px;
+    font-size: 2.2rem;
+    transform: translateY(1px);
+}
+
+.modal-socials-cover span {
+    font-size: 1.6rem;
+}
+
+.d_modal__inner-socials .modal-socials-cover:last-child {
+    background-color: var(--white--color);
+    color: var(--text2-color);
+}
+
+.fa-google {
+    background: conic-gradient(from -45deg, 
+  #ea4335 110deg, 
+  #4285f4 90deg 180deg, 
+  #34a853 180deg 270deg, 
+  #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: 
+  transparent;
+    -webkit-text-fill-color: 
+  transparent;
+  }
+
+.form-message {
+    color: rgb(231, 57, 57);
+    font-size: 1.2rem;
+    transform: translateY(-10px);
+}

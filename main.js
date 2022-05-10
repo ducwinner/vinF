@@ -314,18 +314,35 @@ Array.from(typePa).map((e,index) => {
 })
 }
 
+// console.log(panigation_wrap_car.length)
 
 // function autoPanigation() {
 //     Array.from(panigation_wrap_car).map((e,index) => {
 //         let currentPanigation = index + 1
+//         console.log(currentPanigation == panigation_wrap_car.length)
 //         if(e.classList.contains('background-pri')) {
 //             if(currentPanigation == panigation_wrap_car.length) {
-//                 wrapper_list_car.style.transform ='translateX(0)'
+//             console.log(x)
+//                 wrapper_list_car_row.style.transform = `translateX(calc(25%*${currentPanigation}))`
+//             console.log(ccc)
 //             } else {
-//             wrapper_list_car.style.transform = `translateX(calc(-25%*${currentPanigation}))`
+//                 wrapper_list_car_row.style.transform = `translateX(calc(-25%*${currentPanigation}))`
 //             }
 //         }
 //     })
 // }
 
 // setInterval(autoPanigation,1000)
+
+// Menu list icon
+let list_icon = document.querySelectorAll('.block-menu-icon li')
+let show_list_icon = document.querySelectorAll('.show-list-icon i')
+
+function ShowListIcon() {
+    Array.from(list_icon).map(e => {
+        e.classList.toggle('transform-icon')
+    })
+    Array.from(show_list_icon).map(e => {
+        e.classList.toggle('hide')
+    })  
+}

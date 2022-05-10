@@ -164,6 +164,7 @@
 .header-show-tuvan {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .header-show-tuvan i {
