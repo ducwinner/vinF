@@ -14,25 +14,288 @@
     object-fit: cover;
 }
 
-.wrapper2-cars {
+.wrapper2-product {
     margin: 40px  0;
-    width: 80vw;
+    width: 70vw;
     align-items: center;
+    border-bottom: 1px solid #ccc;
 }
 
-.item-car {
+.wrapper2-product .col {
+    padding-bottom: 20px;
+}
+
+.wrapper2-product .duc__border-bottom {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.item-product {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.item-car .name-car {
+.item-product .name-product {
     font-size: 2.2rem;
     font-weight: 500;
     color: var(--text2-color);
 }
 
-.wrapper2-car-info {
+.wrapper2-product-info {
     width: 80vw;
+    align-items: center;
 }
+
+.product-info-left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product-info-left img{
+    width: 100%;    
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product-info-left span {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.product-name {
+    font-size: 2.8rem;
+    padding-top: 50px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    text-align: center;
+}
+
+.product-deposit {
+    display: flex;
+    align-items: center;
+}
+
+.product-deposit  div {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-right: 15px;
+}
+
+.product-deposit span {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.product-model,
+.product-color,
+.product-furniture  {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-model p,
+.product-color p,
+.product-furniture p {
+    margin: 10px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.product-model div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-model div button {
+    width: 17.6rem;
+    height: 4rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text2-color);
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.product-model div .duc-button {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    outline: none;
+}
+
+.product-color {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-color p {
+    margin: 10px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.product-color .all-color {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-color .all-color div {
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.product-color .all-color .color-border {
+    border: 2px solid var(--primary-color);
+}
+
+.product-color .div1 {
+    background: linear-gradient(34.47deg,rgba(0,0,0,1) -22.12%,rgba(0,0,0,0) 87.91%);
+}
+
+.product-color .div2 {
+    background: linear-gradient(34.47deg,rgba(218, 8, 8,1) -22.12%,rgba(29, 3, 3, 0) 87.91%);
+}
+
+.product-color .div3 {
+    background: linear-gradient(34.47deg,rgba(55, 9, 223,1) -22.12%,rgba(143, 97, 97, 0) 87.91%);
+}
+
+.product-color .div4 {
+    background: linear-gradient(34.47deg,rgba(236, 253, 0,1) -22.12%,rgba(143, 97, 97, 0) 87.91%);
+}
+
+.color2 .div1 {
+    background: linear-gradient(34.47deg,rgba(0,0,0,1) -22.12%,rgba(97, 2, 2, 0.5) 87.91%);
+}
+
+.color2 .div2 {
+    background: linear-gradient(34.47deg,rgb(243, 121, 7) -22.12%,rgba(29, 3, 3, 0.5) 87.91%);
+}
+
+/* Wrapper2-form */
+.wrapper2-form {
+    width: 80vw;
+    display: flex;
+    margin-top: 50px;
+}
+
+.wrapper2-form .row {
+    width: 100%;
+}
+
+.wrapper2-form1 {
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+
+.wrapper2-form1 .header-form {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 50px 0 30px 0;
+}
+
+.wrapper-form-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-form-input .form-input {
+    width: 40%;
+}
+
+.form-input {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-input input{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.form-policy {
+    width: 100%;
+}
+
+.form__check-policy {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px;
+    font-size: 1.6rem;
+    color: var(--text2-color);
+    font-weight: 400;
+}
+
+.form__check-policy div {
+    flex: 1;
+}
+
+.form__check-policy input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.form__check-policy div span {
+    color: var(--primary-color);
+}
+
+.header__form-payment {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text2-color);
+    margin: 20px 0 10px 0;
+}
+
+.form__check-payment {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form__check-payment input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.form__check-payment label {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text2-color);
+}
+

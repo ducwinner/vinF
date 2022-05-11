@@ -9,57 +9,63 @@ let panigation_wrap_car = document.querySelectorAll('.Car__wrapper-item-panigati
 let panigation_wrap_moto = document.querySelectorAll('.Moto__wrapper-item-panigation span')
 let wrapper_list_car_row = document.querySelector('.wrapper-list-car .row')
 let wrapper_list_moto_row = document.querySelector('.wrapper-list-car .duc__row')
-let wrapper_list_moto = document.querySelector('.duc__row')
-
+document.getElementById('title').innerHTML = title
 const cars = [
     {
         id: 1,
         name: 'VF e34',
         price: '690.000.000',
         img: './assets/img/car-dien/VFe34.svg',
-        type: 'dien'
+        type: 'dien',
+        deposit: '50.000.000'
     },
     {
         id: 2,
         name: 'VF  8',
         price: '1057.100.000',
         img: './assets/img/car-dien/VF8_1642740322.png',
-        type: 'dien'
+        type: 'dien',
+        deposit: '80.000.000'
     },
     {
         id: 3,
         name: 'VF 9',
         price: '1.443.200.000',
         img: './assets/img/car-dien/VF9_1642740346.png',
-        type: 'dien'
+        type: 'dien',
+        deposit: '90.000.000'
     },
     {
         id: 4,
         name: 'Fadil',
         price: '1.220.965.000',
         img: './assets/img/car-xang/Fadil.svg',
-        type: 'xang'
+        type: 'xang',
+        deposit: '60.000.000'
     },
     {
         id: 6,
         name: 'LUX SA2.0 xanh',
         price: '1.220.965.000',
         img: './assets/img/car-xang/LUX_A_2.0.xanh.svg',
-        type: 'xang'
+        type: 'xang',
+        deposit: '200.000.000'
     },
     {
         id: 7,
         name: 'LUX SA2.0',
         price: '1.220.965.000',
         img: './assets/img/car-xang/LUX_SA_2.0.svg',
-        type: 'xang'
+        type: 'xang',
+        deposit: '200.000.000'
     },
     {
         id: 8,
-        name: ' President',
+        name: 'President',
         price: '1.220.965.000',
         img: './assets/img/car-xang/President.svg',
-        type: 'xang'
+        type: 'xang',
+        deposit: '300.000.000'
     }
 ];
 
@@ -199,6 +205,23 @@ function loadHtml(type, arr) {
     return html;
 }
 
+// Load header Cars
+function filterCar(e,type){
+
+    list_car.innerHTML = loadHtml(type, cars);
+    if(e) 
+        activeColor(e)
+}
+filterCar(false,'xang');
+//  Load header Motos
+function filterMoto(e,type) {
+    list_moto.innerHTML = loadHtml(type, motos);
+    if(e) 
+        activeColor(e)
+}
+filterMoto(false,'medium')
+
+
 // Wrapper product
 function loadHtml2(arr) { 
     let html = '';
@@ -242,39 +265,15 @@ function loadHtml2(arr) {
 
 
 function loadMotoWrapper(motos) {
-    wrapper_list_moto.innerHTML = loadHtml2(motos)
+    console.log(wrapper_list_moto_row)
+    wrapper_list_moto_row.innerHTML = loadHtml2(motos)
 }
 
-loadMotoWrapper(motos)
-
-// Active color
-function activeColor(e) {
-    Array.from(active_show).map((span) => {
-        if(span.innerHTML == e.target.innerHTML) {
-        span.classList.add('active-background')
-        } 
-        else {
-        if(span.classList.contains('active-background'))
-        span.classList.remove('active-background')
-        }
-    })
+if(page == 'index'){
+    loadMotoWrapper(motos)
 }
 
-// Load header Cars
-function filterCar(e,type){
 
-    list_car.innerHTML = loadHtml(type, cars);
-    if(e) 
-        activeColor(e)
-}
-filterCar(false,'xang');
-//  Load header Motos
-function filterMoto(e,type) {
-    list_moto.innerHTML = loadHtml(type, motos);
-    if(e) 
-        activeColor(e)
-}
-filterMoto(false,'medium')
 
 
 // hover item header
@@ -314,25 +313,31 @@ Array.from(typePa).map((e,index) => {
 })
 }
 
-// console.log(panigation_wrap_car.length)
-
-// function autoPanigation() {
-//     Array.from(panigation_wrap_car).map((e,index) => {
-//         let currentPanigation = index + 1
-//         console.log(currentPanigation == panigation_wrap_car.length)
-//         if(e.classList.contains('background-pri')) {
-//             if(currentPanigation == panigation_wrap_car.length) {
-//             console.log(x)
-//                 wrapper_list_car_row.style.transform = `translateX(calc(25%*${currentPanigation}))`
-//             console.log(ccc)
-//             } else {
-//                 wrapper_list_car_row.style.transform = `translateX(calc(-25%*${currentPanigation}))`
-//             }
-//         }
-//     })
-// }
-
-// setInterval(autoPanigation,1000)
+function autoPanigation() {
+    let arrCar = Array.from(panigation_wrap_moto)
+    console.log(arrCar)
+    let carLength = arrCar.length;
+    for(let i = 0; i < carLength; i++){
+        let lastPanigation = i + 1
+        let firstCar = arrCar[0];
+        let currentCar = arrCar[i];
+        let lastCar = arrCar[lastPanigation];
+        if(carLength != lastPanigation){
+            if(currentCar.classList.contains('background-pri')) {
+                currentCar.classList.remove('background-pri');
+                wrapper_list_moto_row.style.transform = `translateX(calc(-25%*${lastPanigation}))`;
+                lastCar.classList.add('background-pri');
+                break;
+            }
+        }else{
+            currentCar.classList.remove('background-pri');
+            wrapper_list_moto_row.style.transform = `translateX(0)`;
+            firstCar.classList.add('background-pri');
+            break;
+        }
+    }
+}
+setInterval(autoPanigation,2000)
 
 // Menu list icon
 let list_icon = document.querySelectorAll('.block-menu-icon li')
