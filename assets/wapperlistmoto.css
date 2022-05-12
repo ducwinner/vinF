@@ -1,0 +1,45 @@
+
+.moto__product-name {
+    border-bottom: none;
+}
+
+.moto__product-deposit div{
+    text-align: center;
+    margin: 5px 30px;
+}
+
+.moto__product-deposit div div{
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text2-color);
+}
+
+.product-condition {
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc; 
+}
+
+.product-price {
+    text-align: center;
+    margin: 20px 0;
+    color: var(--text2-color);
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.product-depost {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 500;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 25px;
+}
+
+.product-depost span {
+    font-size: 3.4rem;
+    color: var(--primary-color);
+}

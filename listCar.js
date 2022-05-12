@@ -1,6 +1,4 @@
 let listCar = document.getElementById('wrapper2-cars')
-let productColor = document.querySelectorAll('.product-color .all-color div')
-let productFurniture = document.querySelectorAll('.color2 .all-color div')
 let renderProduct = document.getElementById('renderCar')
 
 
@@ -72,18 +70,18 @@ function renderHtmlCar(arr,nameCar) {
             <div class="product-color">
               <p>Lựa chọn màu xe</p>
               <div class="all-color">
-                <div onclick="onclickColor(this,productColor)" class="item-color div1"></div>
-                <div onclick="onclickColor(this,productColor)" class="item-color div2"></div>
-                <div onclick="onclickColor(this,productColor)" class="item-color div3"></div>
-                <div onclick="onclickColor(this,productColor)" class="item-color div4"></div>
+                <div onclick="onclickColor(this)" class="item-color div1"></div>
+                <div onclick="onclickColor(this)" class="item-color div2"></div>
+                <div onclick="onclickColor(this)" class="item-color div3"></div>
+                <div onclick="onclickColor(this)" class="item-color div4"></div>
               </div>
             </div>
 
             <div class="product-color color2">
                 <p>Lựa chọn màu nội thất</p>
                 <div class="all-color">
-                    <div onclick="onclickColor(this,productFurniture)" class="item-color div1"></div>
-                    <div onclick="onclickColor(this,productFurniture)" class="item-color div2"></div>
+                    <div onclick="onclickColor2(this)" class="item-color div1"></div>
+                    <div onclick="onclickColor2(this)" class="item-color div2"></div>
                 </div>
                 </div>
             </div>
@@ -116,14 +114,26 @@ function onclickModel(t) {
 }
 
 
-function onclickColor(t,a) {
-    console.log(a)
-    Array.from(a).map(e => {
+function onclickColor(t) {
+    let productColor = document.querySelectorAll('.product-color .all-color div')
+    Array.from(productColor).map(e => {
         if(e.classList.contains('color-border'))
             e.classList.remove('color-border')
     })
     t.classList.add('color-border')
+
 }
+
+function onclickColor2(t) {
+    let productFurniture = document.querySelectorAll('.color2 .all-color div')
+    Array.from(productFurniture).map(e => {
+        if(e.classList.contains('color-border'))
+            e.classList.remove('color-border')
+    })
+    t.classList.add('color-border')
+
+}
+
 
 
 // Click product Header
@@ -131,7 +141,6 @@ function clickHeader(t) {
     renderCarInfo(t,true)
     panigationHeaderProduct(t)
 }
-
 
 renderCarInfo('LUX SA2.0 xanh',false)
 // panigation of Header Product 

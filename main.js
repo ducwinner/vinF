@@ -205,9 +205,22 @@ function loadHtml(type, arr) {
     return html;
 }
 
+
+// Active color
+function activeColor(e) {
+    Array.from(active_show).map((span) => {
+        if(span.innerHTML == e.target.innerHTML) {
+        span.classList.add('active-background')
+        } 
+        else {
+        if(span.classList.contains('active-background'))
+        span.classList.remove('active-background')
+        }
+    })
+}
+
 // Load header Cars
 function filterCar(e,type){
-
     list_car.innerHTML = loadHtml(type, cars);
     if(e) 
         activeColor(e)
@@ -315,7 +328,6 @@ Array.from(typePa).map((e,index) => {
 
 function autoPanigation() {
     let arrCar = Array.from(panigation_wrap_moto)
-    console.log(arrCar)
     let carLength = arrCar.length;
     for(let i = 0; i < carLength; i++){
         let lastPanigation = i + 1
