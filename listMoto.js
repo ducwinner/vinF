@@ -2,7 +2,8 @@ let listMoto = document.getElementById('wrapper2-motos')
 let renderProduct = document.getElementById('renderMoto')
 
 
-
+filterCar(false,'xang');
+filterMoto(false,'medium')
 
 
 const motos2 = [

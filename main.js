@@ -186,7 +186,7 @@ const motos = [
 const slider = [
     {   id: 1,
         title: 'Thiết kế đầy đam mê',
-        text: 'Kết hợp với nhà thiết kế xe nổi tiếng thế giới Pininfarina, VinFast mang đến chất lượng thiết kế đẳng cấp cho từng dòng xe. Theo đuổi triết lý trải nghiệm chạm sinh học, những chiếc xe VinFast sở hữu vẻ ngoài sang trọng đặc trưng cùng khoang nội thất đậm chất tương lai, được chăm chút trong từng chi tiết.',
+        text: 'Kết hợp với nhà thiết kế xe nổi tiếng thế giới Pininfarina, VinFast mang đến thiết kế đẳng cấp cho từng dòng xe. Theo đuổi triết lý trải nghiệm chạm sinh học, xe VinFast sở hữu vẻ ngoài sang trọng đặc trưng cùng khoang nội thất đậm chất tương lai,chăm chút trong từng chi tiết.',
         img: './assets/img/wrapper-home/thiet-ke-dam-me.png'
     },
     {
@@ -328,6 +328,7 @@ function filterCar(e,type){
     if(e) 
         activeColor(e)
 }
+
 filterCar(false,'xang');
 //  Load header Motos
 function filterMoto(e,type) {

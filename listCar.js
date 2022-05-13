@@ -2,7 +2,8 @@ let listCar = document.getElementById('wrapper2-cars')
 let renderProduct = document.getElementById('renderCar')
 
 
-
+filterCar(false,'xang');
+filterMoto(false,'medium')
 
 function renderHtml(arr) { 
     let html = '';
