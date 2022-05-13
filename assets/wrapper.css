@@ -29,8 +29,61 @@
 
 .wrapper-home {
     margin: 80px 0;
-    padding: 0 50px;
+    /* padding: 0 50px; */
     text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.move-slider {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12%;
+    animation: homeSliderRight linear;
+}
+
+.move-slider div {
+    padding: 10px;
+}
+
+.move-slider div i {
+    font-size: 8rem;
+    color: rgb(255, 81, 0);
+}
+
+.wrapper-home-slider {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    transition: 1s;
+}
+
+@keyframes homeSliderRight {
+    from {
+        opacity: 0.8;
+        transform: translateX(30%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes homeSliderLeft {
+    from {
+        opacity: 0.8;
+        transform: translateX(-30%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.wrapper-home-slider .col {
 }
 
 .wrapper-item {
@@ -50,6 +103,9 @@
     color: var(--text-color);
     font-weight: 300;
     line-height: 30px;
+    width: 80%;
+    text-align: center;
+    transform: translateX(14%);
 }
 
 .item-img {
@@ -79,6 +135,8 @@
     padding-bottom: 60px;
     animation: nextCar ease-in 0.3s forwards;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .wrapper-list-car .row {
@@ -91,6 +149,9 @@
     padding: 0 45px;
 }
 
+.wrapper-list-car .cart-btn {
+    margin-top: auto;
+}
 
 .wrapper-car .item-title h5 {
     display: block;
@@ -205,7 +266,6 @@
 
 /* Footer Wrapper */
 .wrapper-footer {
-    width: 100vw;
     margin: 40px 0;
 }
 

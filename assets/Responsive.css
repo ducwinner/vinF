@@ -1,0 +1,30 @@
+
+
+
+
+@media (max-width: 1568px) {
+    .wrapper-car-btn{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .wrapper-car-btn button {
+        display: flex;
+        margin: 0 auto;
+    }
+    /* .wrapper-car-btn .duc_btn {
+        display: none;
+    }
+    .wrapper-car-btn button:last-child {
+        display: flex;
+        margin: 0 auto;
+    } */
+    .wrapper-car-slogan {
+        height: 50px;
+    }
+}
+
+@media (max-width: 1152px) {
+
+}

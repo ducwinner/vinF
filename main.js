@@ -9,6 +9,9 @@ let panigation_wrap_car = document.querySelectorAll('.Car__wrapper-item-panigati
 let panigation_wrap_moto = document.querySelectorAll('.Moto__wrapper-item-panigation span')
 let wrapper_list_car_row = document.querySelector('.wrapper-list-car .row')
 let wrapper_list_moto_row = document.querySelector('.wrapper-list-car .duc__row')
+let wrapper_home_slider = document.getElementById('wrapper-home-slider')
+let wrapper_home_slider_col = document.querySelectorAll('.wrapper-home-slider .col')
+
 document.getElementById('title').innerHTML = title
 const cars = [
     {
@@ -180,6 +183,106 @@ const motos = [
     }
 ];
 
+const slider = [
+    {   id: 1,
+        title: 'Thiết kế đầy đam mê',
+        text: 'Kết hợp với nhà thiết kế xe nổi tiếng thế giới Pininfarina, VinFast mang đến chất lượng thiết kế đẳng cấp cho từng dòng xe. Theo đuổi triết lý trải nghiệm chạm sinh học, những chiếc xe VinFast sở hữu vẻ ngoài sang trọng đặc trưng cùng khoang nội thất đậm chất tương lai, được chăm chút trong từng chi tiết.',
+        img: './assets/img/wrapper-home/thiet-ke-dam-me.png'
+    },
+    {
+        id: 2,
+        title: 'Công nghệ thông minh cho tương lai',
+        text: 'Đặt khách hàng làm trọng tâm, các mẫu xe thông minh của VinFast được ứng dụng những công nghệ ưu việt hàng đầu thế giới, mở ra không gian hưởng thụ tiện nghi, giải trí hoàn hảo cùng trải nghiệm cá nhân hóa đáng giá nhất.',
+        img: './assets/img/wrapper-home/cntm_1_1639672435.png'
+    },
+    {
+        id: 3,
+        title: 'Đẳng cấp an toàn quốc tế',
+        text: 'Đặt sự an tâm của khách hàng lên trên hết, những chiếc xe của VinFast được trang bị các tính năng an toàn tối tân nhất để bảo vệ người lái và mọi hành khách trên xe, đáp ứng tiêu chuẩn khắt khe của các tổ chức đánh giá xe uy tín hàng đầu thế giới như ASEAN NCAP, EURO NCAP, NHTSA...',
+        img: './assets/img/wrapper-home/dang-cap-quoc-te.png'
+    },
+    {
+        id: 4,
+        title: 'Trải nghiệm xuất sắc',
+        text: 'Sở hữu xe VinFast chính là tận hưởng những giá trị tốt nhất của một hệ sinh thái đẳng cấp, từ mô hình O2O tích hợp thương mại điện tử và trải nghiệm tại hệ thống Đại lý/Showroom/Trạm sạc rộng khắp, tới chất lượng dịch vụ hậu mãi vượt trội và sự tận tâm trong từng khoảnh khắc của khách hàng.',
+        img: './assets/img/wrapper-home/chinh-sach.png'
+    }
+]
+
+// Render Wrapper home
+function loadHtml3 (arr,id) {
+    let html = '';
+    arr.forEach(e => {
+        let title = e.title;
+        let text = e.text;
+        let img = e.img;
+        let row = 
+        `
+        <div class="col col-lg-12">
+            <div class="wrapper-item">
+            <div class="item-title">
+                <H2 id="title-home">${title}</H1>
+                <h5>
+                ${text}
+                </h3>
+            </div>
+            <div class="item-img">
+                <img src="${img}" alt="">
+            </div>
+            </div>
+        </div>
+        `
+        if(e.id == id) {
+            html = row
+        }
+    })
+    return html
+}
+
+
+function RenderWrapHome(id) {
+    wrapper_home_slider.innerHTML = loadHtml3(slider,id)
+}
+
+RenderWrapHome(1)
+
+// Move Wrapper Home
+
+function clickMove(t) {
+    let title = document.getElementById('title-home')
+    let nextSlider = 0
+    let prevSlider = 0
+    slider.forEach((e,index) => {
+        if(e.title == title.innerText) {
+            if(t.classList.contains('next-slider')) {
+                if(index == slider.length - 1) {
+                    RenderWrapHome(1)
+                } else {
+                    nextSlider = index + 2
+                    RenderWrapHome(nextSlider)
+                }
+                wrapper_home_slider.style.animation = ''
+                setTimeout(()=>{
+                    wrapper_home_slider.style.animation = 'homeSliderRight ease-in 0.5s forwards'
+                }, 0)
+            } else {
+                if(index == 0) {
+                    RenderWrapHome(slider.length)
+                } else {
+                    prevSlider = index
+                    RenderWrapHome(prevSlider)
+                }
+                wrapper_home_slider.style.animation = ''
+                setTimeout(()=>{
+                    wrapper_home_slider.style.animation = 'homeSliderLeft ease-out 0.5s forwards'
+                }, 0)
+            }
+        }
+    })
+}
+
+
+
 //  Render Header product
 function loadHtml(type, arr) { 
     let html = '';
@@ -206,7 +309,7 @@ function loadHtml(type, arr) {
 }
 
 
-// Active color
+// Active color Panigation
 function activeColor(e) {
     Array.from(active_show).map((span) => {
         if(span.innerHTML == e.target.innerHTML) {
@@ -278,7 +381,6 @@ function loadHtml2(arr) {
 
 
 function loadMotoWrapper(motos) {
-    console.log(wrapper_list_moto_row)
     wrapper_list_moto_row.innerHTML = loadHtml2(motos)
 }
 
@@ -290,7 +392,6 @@ if(page == 'index'){
 
 
 // hover item header
-
 
 function overItem(e) {
     let img_hover = document.querySelectorAll('.duc_col img')
@@ -310,7 +411,6 @@ function outItem() {
     })
 }
 
-
 // Panigation of Car wrapper 
 
 function panigationmoMove(t,typePa,typePr)  {
@@ -326,7 +426,7 @@ Array.from(typePa).map((e,index) => {
 })
 }
 
-function autoPanigation() {
+function autoPanigation1() {
     let arrCar = Array.from(panigation_wrap_moto)
     let carLength = arrCar.length;
     for(let i = 0; i < carLength; i++){
@@ -349,7 +449,33 @@ function autoPanigation() {
         }
     }
 }
-setInterval(autoPanigation,2000)
+
+function autoPanigation2() {
+    let arrCar = Array.from(panigation_wrap_car)
+    let carLength = arrCar.length;
+    for(let i = 0; i < carLength; i++){
+        let lastPanigation = i + 1
+        let firstCar = arrCar[0];
+        let currentCar = arrCar[i];
+        let lastCar = arrCar[lastPanigation];
+        if(carLength != lastPanigation){
+            if(currentCar.classList.contains('background-pri')) {
+                currentCar.classList.remove('background-pri');
+                wrapper_list_car_row.style.transform = `translateX(calc(-25%*${lastPanigation}))`;
+                lastCar.classList.add('background-pri');
+                break;
+            }
+        }else{
+            currentCar.classList.remove('background-pri');
+            wrapper_list_car_row.style.transform = `translateX(0)`;
+            firstCar.classList.add('background-pri');
+            break;
+        }
+    }
+}
+
+setInterval(autoPanigation1,5000)
+setInterval(autoPanigation2,5000)
 
 // Menu list icon
 let list_icon = document.querySelectorAll('.block-menu-icon li')
@@ -363,3 +489,5 @@ function ShowListIcon() {
         e.classList.toggle('hide')
     })  
 }
+
+// click Move Wrapper-home
